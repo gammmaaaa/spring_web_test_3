@@ -1,0 +1,27 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="add-blocked-for-column-client" author="Tarasov">
+        <sqlFile encoding="utf8" path="/db/changelog/changeset/22-01-changelog.sql"/>
+        <rollback/>
+    </changeSet>
+
+    <changeSet id="add-blocked-whom-column-client" author="Tarasov">
+        <sqlFile encoding="utf8" path="/db/changelog/changeset/22-02-changelog.sql"/>
+        <rollback/>
+    </changeSet>
+
+    <changeSet id="create-tables-security" author="Tarasov">
+        <sqlFile encoding="utf8" path="/db/changelog/changeset/30-01-changelog.sql"/>
+        <rollback/>
+    </changeSet>
+
+    <changeSet id="create-roles" author="Tarasov">
+        <sqlFile encoding="utf8" path="/db/changelog/changeset/insert-roles.sql"/>
+        <rollback/>
+    </changeSet>
+
+</databaseChangeLog>
